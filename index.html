@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة زفاف أنس & آلاء</title>
+    <!-- خطوط جوجل العربية الفخمة -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+    <!-- مكتبة أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- واجهة البصمة الأولية -->
+    <div id="welcome-screen" class="welcome-screen">
+        <div class="welcome-content">
+            <div class="glow-initials">A & A</div>
+            <h1>أنس & آلاء</h1>
+            <p>يسعدنا حضوركم لليلة عمرنا</p>
+            
+            <div class="fingerprint-box" id="fingerprint-btn">
+                <div class="fingerprint-icon">
+                    <i class="fa-solid fa-fingerprint"></i>
+                </div>
+                <span>ضع بصمتك لتأكيد حضورك والدخول</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- تأثير البوابات المودرن للانتقال -->
+    <div class="curtain-left" id="curtain-left"></div>
+    <div class="curtain-right" id="curtain-right"></div>
+
+    <!-- محتوى الدعوة الرئيسي -->
+    <div id="main-invitation" class="main-invitation hidden">
+        
+        <!-- تشغيل الصوت (يبدأ من الثانية السادسة تلقائياً عند الدخول) -->
+        <audio id="wedding-audio" src="music.mp3" preload="auto"></audio>
+
+        <!-- الحرفين المرفقين في الأعلى مع تأثير الإضاءة -->
+        <header class="invitation-header">
+            <img src="شعار حرفي ذهبي بتاج ولآلئ.png" alt="AA Logo" class="top-logo-glow">
+        </header>
+
+        <main class="invitation-body">
+            <div class="card-container">
+                <span class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
+                <h2>دعوة زفاف مباركة</h2>
+                <p class="intro-text">بأقل عبارات الفرح وأعظم أماني السعادة، تكتمل فرحتنا ونلتقي على حب الخير</p>
+                
+                <div class="couple-names">
+                    <span class="groom">أنس محمد حمدان</span>
+                    <span class="heart-icon"></span>
+                    <span class="bride">آلاء محمود محفوظ</span>
+                </div>
+
+                <div class="event-details">
+                    <div class="detail-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <div>
+                            <strong>اليوم والتاريخ</strong>
+                            <p>الخميس 19 / 11 / 2026</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong>الساعة</strong>
+                            <p>8:00 مساءً</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>المكان</strong>
+                            <p>قاعة روفان - الواحات الخارجة - الوادي الجديد</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- خريطة الموقع -->
+                <div class="map-section">
+                    <a href="https://maps.app.goo.gl/SYfLgdBeM2ukS6vRA?g_st=ac" target="_blank" class="map-btn">
+                        <i class="fa-solid fa-map-location-dot"></i> افتح موقع القاعة على الخريطة
+                    </a>
+                </div>
+
+                <!-- ملاحظة هامة -->
+                <div class="notice-box">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span>ملاحظة هامة: ممنوع تماماً التصوير الحفاظاً على خصوصية الحضور.</span>
+                </div>
+
+                <!-- قسم تأكيد الحضور والتهاني -->
+                <section class="wishes-section">
+                    <h3>سجل تهنئتك وتأكيد حضورك</h3>
+                    <form id="wishes-form">
+                        <input type="text" id="guest-name" placeholder="الاسم الكريم ثلاثي..." required>
+                        <textarea id="guest-message" placeholder="اكتب تهنئتك للعروسين..." rows="3" required></textarea>
+                        <button type="submit" class="submit-wish-btn">إرسال التهنئة وتأكيد الحضور</button>
+                    </form>
+
+                    <!-- لوحة عرض التهاني التفاعلية -->
+                    <div class="wishes-container" id="wishes-container">
+                        <!-- تظهر التهاني المرسلة هنا -->
+                    </div>
+                </section>
+
+                <!-- خاتمة الدعوة -->
+                <footer class="invitation-footer">
+                    <div class="final-couple">أنس <i class="fa-solid fa-ring"></i> آلاء</div>
+                    <p class="copyrights">جميع الحقوق محفوظة © 2026</p>
+                    
+                    <!-- توقيع المصمم مع أزرار الاتصال والواتساب المباشر -->
+                    <div class="designer-badge">
+                        <span>تصميم وبرمجة: <strong>Dr. Design</strong></span>
+                        <div class="contact-links">
+                            <a href="tel:01147419383" class="contact-icon phone" title="اتصال"><i class="fa-solid fa-phone"></i></a>
+                            <a href="https://wa.me/201147419383" target="_blank" class="contact-icon whatsapp" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
